@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "DCPrettier",
+  "description": "디시인사이드에서 불필요한 요소들을 삭제해줍니다.",
+  "version": "0.3.4",
+  "content_scripts": [
+    {
+      "matches": ["*://www.dcinside.com/*"],
+      "js": ["src/main.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://gall.dcinside.com/*"],
+      "js": ["src/gall.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://m.dcinside.com/*"],
+      "js": ["src/mobile.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
