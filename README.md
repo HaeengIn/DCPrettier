@@ -20,7 +20,9 @@
 
 - Chrome 웹 스토어에서 다운로드 받기
 
-  - 추후 지원 예정
+    1. [DCPrettier Chrome Web Store 페이지](https://chromewebstore.google.com/detail/dcprettier/hcedfcjmhmnebojmoeffhaejnlebmobl)에 접속합니다.
+
+    2. `Chrome에 설치` 버튼을 누릅니다.
 
 ## 기여
 
