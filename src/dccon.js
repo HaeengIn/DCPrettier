@@ -1,17 +1,9 @@
 // List for remove target
-const mobileTargets = [
-  ".rank-tit-box",
-  ".nh-group",
-  ".livebest-group",
-  ".gall-group",
-  ".media-group",
-  ".survey",
-  ".evt-noti",
-];
+const dcconTargets = [".gall_exposure"];
 
 // Remove unnecessary contents
 function removeElements() {
-  mobileTargets.forEach((selector) => {
+  dcconTargets.forEach((selector) => {
     const el = document.querySelector(selector);
     if (el) {
       el.remove();

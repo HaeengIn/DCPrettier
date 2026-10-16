@@ -1,16 +1,17 @@
 // List for remove target
-const desktopTargets = [
+const mainTargets = [
+  ".gall_exposure",
   ".left_content",
   "#rank_gall",
   "#hot_gall",
   ".new_gall",
   ".dcmedia",
-  ".all_list"
+  ".all_list",
 ];
 
 // Remove unnecessary contents
 function removeElements() {
-  desktopTargets.forEach(selector => {
+  mainTargets.forEach((selector) => {
     const el = document.querySelector(selector);
     if (el) {
       el.remove();
@@ -29,5 +30,5 @@ const observer = new MutationObserver(() => {
 // Start observing change of website on live.
 observer.observe(document.documentElement, {
   childList: true,
-  subtree: true
+  subtree: true,
 });
