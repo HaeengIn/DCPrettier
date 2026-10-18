@@ -11,25 +11,16 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://www.dcinside.com/*", "*://event.dcinside.com/*"],
+      "matches": [
+        "*://www.dcinside.com/*",
+        "*://gall.dcinside.com/*",
+        "*://m.dcinside.com/*",
+        "*://dccon.dcinside.com/*",
+        "*://mall.dcinside.com/*",
+        "*://event.dcinside.com/*"
+      ],
       "js": ["src/main.js"],
       "run_at": "document_start"
-    },
-    {
-      "matches": ["*://gall.dcinside.com/*"],
-      "js": ["src/gall.js"],
-      "run_at": "document_start"
-    },
-    {
-      "matches": ["*://m.dcinside.com/*"],
-      "js": ["src/mobile/main.js"],
-      "run_at": "document_start"
-    },
-    {
-      "matches": ["*://mall.dcinside.com/*", "*://dccon.dcinside.com/*"],
-      "js": ["src/dccon.js"],
-      "run_at": "document_start",
-      "all_frames": true
     }
   ]
 }
