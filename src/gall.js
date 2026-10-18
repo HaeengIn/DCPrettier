@@ -7,7 +7,6 @@ const gallTargets = [
   ".all_list",
   "#opt_use_pop",
   "#opt_use_pop_bg",
-  ".left_content",
   ".mini_new",
 ];
 
