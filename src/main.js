@@ -1,3 +1,25 @@
+function getKST() {
+  const now = new Date();
+  const formatter = new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+
+  const parts = Object.fromEntries(
+    formatter.formatToParts(now).map(({ type, value }) => [type, value]),
+  );
+
+  if (parts.hour === "24") parts.hour = "00";
+
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second}`;
+}
+
 const SELECTORS = {
   "www.dcinside.com": [
     ".gall_exposure",
@@ -57,7 +79,9 @@ function removeElements() {
     if (els.length > 0) {
       els.forEach((el) => el.remove());
       remaining.delete(selector); // 실제로 찾았을 때만 제거
-      console.log();
+
+      let KST = getKST();
+      console.log(`DCPrettier: ${KST} - ${selector}를 삭제했습니다.`);
     }
   }
   if (remaining.size === 0) observer.disconnect();
