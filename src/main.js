@@ -16,8 +16,19 @@ const SELECTORS = {
     ".all_list",
     "#opt_use_pop",
     "#opt_use_pop_bg",
-    ".left_content",
     ".mini_new",
+    // 갤러리
+    ".cont_head",
+    ".pageing_box.gallmain",
+    ".cont_list.img.recomImg",
+    ".cont_list.txt.recomTxt",
+    ".hotcate_list.clear",
+    // 마이너 갤러리
+    ".mgall_info.clear",
+    ".mgall_list_wrap.clear",
+    ".allandrank.clear",
+    // 미니 갤러리
+    ".mini_list_wrap.clear",
   ],
   "m.dcinside.com": [
     ".rank-tit-box",
@@ -46,6 +57,7 @@ function removeElements() {
     if (els.length > 0) {
       els.forEach((el) => el.remove());
       remaining.delete(selector); // 실제로 찾았을 때만 제거
+      console.log();
     }
   }
   if (remaining.size === 0) observer.disconnect();
